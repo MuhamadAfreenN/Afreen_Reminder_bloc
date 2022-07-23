@@ -14,15 +14,6 @@ class ReminderScreen extends StatefulWidget {
 
 class _ReminderScreenState extends State<ReminderScreen> {
   @override
-  void initState() {
-    // TODO: implement initState
-    super.initState();
-    setState(() {
-
-    });
-  }
-
-  @override
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (context) => ReminderBloc(
@@ -76,12 +67,8 @@ actions: [
                                 ),
                                 GestureDetector
                                   (onTap: (){
-                                    setState(() {
-                                      DeleteReminderService().deleteReminder(state.data![index].id.toString()).then((value) => {
-                                        ReminderService().getReminder()
-
-                                    });
-
+                                  DeleteReminderService().deleteReminder(state.data![index].id.toString()).then((value) => {
+                                    ReminderService().getReminder()
                                   });
 
                                 },
