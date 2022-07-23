@@ -5,14 +5,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '/model/delete_reminder.dart';
 
-class ReminderScreen extends StatefulWidget {
+class ReminderScreen extends StatelessWidget {
   const ReminderScreen({Key? key}) : super(key: key);
 
-  @override
-  State<ReminderScreen> createState() => _ReminderScreenState();
-}
-
-class _ReminderScreenState extends State<ReminderScreen> {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
