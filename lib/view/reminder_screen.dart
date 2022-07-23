@@ -5,8 +5,22 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '/model/delete_reminder.dart';
 
-class ReminderScreen extends StatelessWidget {
+class ReminderScreen extends StatefulWidget {
   const ReminderScreen({Key? key}) : super(key: key);
+
+  @override
+  State<ReminderScreen> createState() => _ReminderScreenState();
+}
+
+class _ReminderScreenState extends State<ReminderScreen> {
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    setState(() {
+
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -62,8 +76,12 @@ actions: [
                                 ),
                                 GestureDetector
                                   (onTap: (){
-                                  DeleteReminderService().deleteReminder(state.data![index].id.toString()).then((value) => {
-                                    ReminderService().getReminder()
+                                    setState(() {
+                                      DeleteReminderService().deleteReminder(state.data![index].id.toString()).then((value) => {
+                                        ReminderService().getReminder()
+
+                                    });
+
                                   });
 
                                 },
