@@ -1,4 +1,4 @@
-import 'package:bloc_8_reminder_app/model/reminder.dart';
+import 'package:bloc_8_reminder_app/model/list_reminder.dart';
 
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';

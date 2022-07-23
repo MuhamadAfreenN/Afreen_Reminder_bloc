@@ -1,5 +1,5 @@
 import 'package:bloc_8_reminder_app/model/delete_reminder.dart';
-import 'package:bloc_8_reminder_app/model/reminder.dart';
+import 'package:bloc_8_reminder_app/model/list_reminder.dart';
 import 'package:bloc_8_reminder_app/view/add_reminder.dart';
 import 'package:bloc_8_reminder_app/view/reminder_screen.dart';
 import 'package:flutter/material.dart';
